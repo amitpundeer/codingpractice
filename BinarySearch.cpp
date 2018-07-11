@@ -3,7 +3,8 @@ WAP for Binary search of an element in an array
 */
 
 #include<iostream>
-#include<dos> 
+
+#include<dos> // remove this 
 #include<cstdlib>
 
 using namespace std;
@@ -11,7 +12,6 @@ using namespace std;
 int main()
 {
 int binarysearch(int [], int, int);
-
 void isValid(int);
 
 int size, arr[100], ele, pos;
@@ -53,8 +53,7 @@ int beg=0, last=size-1, mid;
 
 while(beg<=last)
 	{
-
-	mid=((beg+last)/2);
+	mid=((beg+last)/2); // Change it to (beg + (last-beg)/2)
 
 	if(ele==arr[mid])
 		return mid;
